@@ -11,5 +11,5 @@ jobs:
         node-version: 20
     - name: Install dependencies
       run: npm install
-    - name: Build
-      run: echo "Building the app.."
+    - name: Testing EndPoint
+      run: npm run test
