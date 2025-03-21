@@ -135,8 +135,8 @@
   <script>
     // Fetch products from the API and render them
     fetch('https://dummyjson.com/products')
-      .then(res => res.json())
-      .then(data => {
+        .then(res => res.json())
+        .then(data => {
         const productContainer = document.getElementById('product-container');
         data.products.forEach(product => {
           const productCard = document.createElement('div');
