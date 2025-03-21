@@ -10,7 +10,10 @@ describe('UI Tests for Product Showcase', () => {
 
   beforeAll(async () => {
     // Launch a headless browser
-    browser = await puppeteer.launch();
+    browser = await puppeteer.launch({
+        headless: true,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      });
     page = await browser.newPage();
 
     // Construct the file path to the HTML file
