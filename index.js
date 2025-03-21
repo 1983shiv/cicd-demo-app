@@ -14,6 +14,11 @@ app.post("/api/hello", (req, res) => {
     res.json({ message : `Hello ${name}`})
 })
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port http://localhost:${PORT}`)
-})
+// Only start the server if the file is run directly
+if (process.env.NODE_ENV !== 'test') {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port http://localhost:${PORT}`);
+    });
+}
+
+export default app;
