@@ -54,6 +54,6 @@ describe('UI Tests for Product Showcase', () => {
   // Test 4: Check if the footer content is correct
   test('Footer should contain copyright text', async () => {
     const footerText = await page.$eval('footer p', (el) => el.textContent);
-    expect(footerText).toContain('© 2025 Product Showcase. All rights reserved.');
+    expect(footerText).toContain('© 2025 CI/CD Demo Showcase. All rights reserved.');
   });
 });
